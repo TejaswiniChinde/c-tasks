@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class car{
+	private:
+	 string name,eng,carno;
+	public:
+	 car(string name,string eng,string carno)
+	 {
+	 this->	name=name;
+	 this->	eng=eng;
+	 this->	carno=carno;
+	 }
+	 void display(){
+	 	
+	 	cout<<name<<" "<<endl;
+	 	cout<<eng<<" "<<endl;
+	 	cout<<carno<<" "<<endl;
+	 }
+	 	 
+	
+};
+int main()
+{
+	car r("ram","320hz","3456");
+	r.display();
+	return 0;
+}
