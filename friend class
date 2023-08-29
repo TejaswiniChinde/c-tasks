@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class HumanBeing{ 
+   //creating of class
+private:
+	string name;
+	int age;
+public:
+	
+	HumanBeing(string word,int val){
+      
+		name=word;
+		age=val;
+
+
+	}
+	friend void Display(HumanBeing teju);
+	//friend class student;
+};
+void Display(HumanBeing teju){
+	cout<<teju.name<<endl;
+}
+	
+		
+int main()
+{
+
+	HumanBeing teju("teju",18);
+	Display(teju);
+	return 0;
+} 
