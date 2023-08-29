@@ -1,0 +1,59 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class HumanBeing{ 
+   //creating of class
+private:
+	string name;
+	int age;
+public:
+	//creating a constructors and they are types given below
+// when object is created then automatically constrocter is called
+
+//constructer is same as class name
+	HumanBeing(){
+		//default constructor
+		name="NO name";
+		age=0;
+	}
+	HumanBeing(string word,int val){
+		//parameterised constructor
+	//in this constroctorwe giving the arguments
+		name=word;
+		age=val;
+
+	}
+	HumanBeing(string word){
+		name=word;
+		age=0;
+	}
+	HumanBeing(int val){
+		name="NO name";
+		age=val;
+	}
+	HumanBeing(HumanBeing &Teju){
+		//copy constructor
+		//to copy the from another one variable
+		name=Teju.name;
+		age=Teju.age;
+	}
+		void display(){
+		cout<<name<<" "<<age<<endl;
+	}
+
+	
+};
+int main()
+{
+
+	HumanBeing h1("Teju",18);
+	HumanBeing h2(18);
+	HumanBeing h3("Teju");
+	HumanBeing h4(h1);
+	h1.display();
+	h2.display();
+	h3.display();
+	h4.display();
+
+	return 0;
+} 
