@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class HumanBeing{    //creating of class
+private:
+//private memebers cannot access out side the class
+	string name;
+	int age;
+public:
+	void  SetData(int val,string word){
+		age=val;
+		name=word;
+	}
+	void GetData(){
+		cout<<"iam"<<name<<"with age"<<age<<endl;
+	}
+
+};
+int main()
+{
+
+	HumanBeing teju;
+	teju.SetData(19,"Teju");
+	teju.GetData();
+	return 0;
+} 
