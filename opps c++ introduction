@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class HumanBeing{    //creating of class
+public://declaration of specifier
+	string name;
+	void Introduce(){//function declaration
+		cout<<"hi"<<name<<endl;
+	}
+
+};
+int main()
+{
+	//object declared in static
+	HumanBeing teju;
+	teju.name="teju";
+	teju.Introduce();
+//object declared in pointer
+	HumanBeing *akshi=&teju;
+	akshi->name="akshi";
+	akshi->Introduce();
+
+
+	return 0;
+} 
