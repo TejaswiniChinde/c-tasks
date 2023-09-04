@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+class person{
+public:
+	int age;
+	string name;
+public:
+	void setname(string word){
+		name=word;
+	}
+	void setage(int val){
+		age=val;
+	}
+
+};
+class student : public person{
+
+public:
+	 using person::setname;
+     using person::setage;
+	int id;
+	string collegename;
+
+	void setid(int val){
+		id=val;
+	}
+	void setcollegename(string college){
+		 collegename=college;
+
+	}
+	void display()
+	{
+		cout<<name<<""<<age<<""<<endl;
+	}
+
+};
+int main()
+{
+	/* code */
+	student s1;
+	s1.setname("teju");
+	s1.setage(18);
+	s1.display();
+	return 0;
+}
