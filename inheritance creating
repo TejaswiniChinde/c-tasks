@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+class human{
+public:
+	int age;
+	string name;
+	void SetName(string myname){
+		name=myname;
+	}
+	void SetAge(int val){
+		age=val;
+	}
+};
+class student:public human{
+public:
+	int id;
+	void SetId(int val){
+		id=val;
+	}
+	void display(){
+		cout<<name<<" "<<age<<" "<<id<<endl;
+	}
+	void Setdata(string myname,int val,int data){
+		name=myname;
+		age=val;
+		id=data;
+	}
+};
+int main()
+{
+student obj;
+obj.SetName("teju");
+obj.SetAge(18);
+obj.SetId(123);
+obj.display();
+return 0;
+
+} 
