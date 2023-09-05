@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Father{
+public:
+	int age;
+	string name;
+	Father(string word,int val){
+		age=val;
+		name=word;
+	}
+
+};
+
+class Mother{
+public:
+	int house;
+	string place;
+	Mother(string pla,int hou){
+		house=hou;
+		place=pla;
+	}
+
+};
+
+class Child:public Father,public Mother{
+public:
+	int marks;
+	string college;
+	string id;
+	Child(string col,string i,int mar,string word,int val,string pla,int hou ):Father(word,val),Mother(pla,hou)
+	{
+		this->college=col;
+		this->id=i;
+		this->marks=mar;
+	}
+	void display(){
+		cout<<name<<" "<<age<<" "<<place<<" "<<house<<" "<<college<<" "<<id<<" "<<marks<<endl;
+	}
+
+};
+
+int main()
+{
+	
+	Child c1("acoe","05g4",100,"Teju",18,"kkd",217);
+	c1.display();
+
+}
