@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class father{
+public:
+	int age;
+	string name;
+	father(string word,int val){
+		age=val;
+		name=word;
+	}
+
+};
+class child:public father{
+public:
+	int marks;
+	string college,id;
+	child(string word, int age, string college,string id,int marks): father(word,age)
+	{
+	this->	college=college;
+	this->	id=id;
+	this->	marks=marks;
+	}
+	void display(){
+		cout<<"My name is: "<<name<<""<<" iam"<<age<<""<<" my id "<<id<<""<<" with my marks "<<marks<<endl;
+	}
+
+};
+
+int main()
+{
+	/* code */
+	child c1("teju",18,"ACOE","05g4",99);
+	c1.display();
+	return 0;
+}
