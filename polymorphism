@@ -1,0 +1,73 @@
+// About polymorphism
+//The word “polymorphism” means having many forms.
+//polymorphism as the ability of a message to be displayed in more than one form. 
+//for this in real time example: we take man perform has husband,father,grandfather etc...
+//In polymorphism there are two types of polymorphism.
+//1.compile time polymorphism
+//a.function overloading
+//b.operator overloading
+//2.Run time polymorphism
+//a.virtual Functions
+//---->polymorphism----->//
+//--->compile time polymorphism---->//
+//------>function overloading------>//
+#include<iostream>
+using namespace std;
+class teju{
+public:
+	void fun(int x,int y){
+
+		cout<<x+y<<" "<<endl;
+	}
+
+	void fun(int x,int y,int z){
+		cout<<x+y+z<<" "<<endl;
+
+	}
+
+};
+int main(){
+	teju a;
+	a.fun(25,98);
+	a.fun(49,89,32);
+
+}
+
+//----->operator overloading--->//
+//operator overloding means:the ability to provide the operators with a special meaning for a data type.
+// this ability is known as operator overloading.
+// For example, we can make use of the addition operator (+) for string class to concatenate two strings.
+// We know that the task of this operator is to add two operands.
+// So a single operator ‘+’, when placed between integer operands, adds them and when placed between string operands, concatenates them. 
+#include<iostream>
+using namespace std;
+class complex{
+private:
+	int x,y;
+public:
+	complex(int i=0,int j=0){
+		x=i;
+		y=j;
+	}
+	void print()
+	{
+		cout<<x<<"+"<<y<<"i"<<endl;
+	}
+	complex operator+(complex &c1){
+		complex temp;
+		temp.x=c1.x+x;
+		temp.y=c1.y+y;
+		return temp;
+	}
+};
+int main(){
+	complex c1(3,4);
+	complex c2(7,2);
+	c1.print();
+	c2.print();
+	complex c3;
+	c3=c2.operator+(c1);
+	c3.print();
+
+
+}
