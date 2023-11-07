@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+class Bank{
+public:
+	int number;
+	string name;
+	Bank(int no,string na)
+	{
+		this->number=no;
+		this->name=na;
+	}
+};
+class Manager:public Bank{
+public:
+	string ph;string place;
+	Manager(int no,string na,string ph,string place):Bank(no,na){
+		this->ph=ph;
+		this->place=place;
+	}
+};
+class employee:public Bank{
+public:
+	int id;
+	string pn;
+	employee(int no,string na,int id,string pn):Bank(no,na){
+		this->id=id;
+		this->pn=pn;
+	}
+	void display(){
+		cout<<"Bank name:"<<name<<endl<<"employee id:"<<id;
+	}
+};
+int main(){
+	employee e(2,"andhra",254,"teja");
+	e.display();
+
+}
